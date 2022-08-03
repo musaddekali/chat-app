@@ -1,18 +1,22 @@
-import { useState } from 'react';
+import { Route, Routes } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import './assets/global-styles/app-global.css';
+import Layout from './components/Layout/Layout';
+import {Home,Profile, NoPage} from './pages';
+
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const controlCount = () => {
-    setCount(count + 1);
-  }
-
   return (
-    <div className="App">
-      <button onClick={controlCount}>Count</button>
-      <h3>{count}</h3>
-    </div>
-  );
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path='profile' element={<Profile />} />
+          <Route path="*" element={<NoPage/>}/>
+        </Route>
+      </Routes>
+    </>
+  )
 }
 
 export default App;
