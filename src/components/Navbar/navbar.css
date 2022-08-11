@@ -1,7 +1,9 @@
 .navmenu {
-  background: var(--primary);
-  line-height: 1;
   padding: 0.5rem 0;
+  height: 100%;
+  flex: 1;
+  line-height: 1;
+  background: var(--primary);
 }
 
 .navmenu > .container-fluid {

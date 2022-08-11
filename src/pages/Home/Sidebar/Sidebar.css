@@ -1,0 +1,68 @@
+/* Sidebar  */
+.chat-sidebar {
+    height: calc(100vh - var(--header-height));
+    overflow-x: hidden;
+}
+
+.friends {
+  padding: 1rem 0.5rem;
+}
+
+.friends > * {
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.friend {
+  border-radius: 0.5rem;
+  line-height: 1.3;
+  color: var(--black);
+  transition: background 0.3s;
+  border-bottom: 1px solid var(--gray-400);
+  margin-bottom: 0.5rem;
+}
+
+.friend:hover {
+  background: rgba(var(--secondary-rgb), 0.2);
+  color: var(--black);
+}
+
+.friend img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 0.75rem;
+}
+
+.friend .name {
+  font-size: 15px;
+  display: block;
+}
+
+.friend .sub-text {
+  font-size: 13px;
+  color: var(--gray-700);
+}
+
+/* Responsive  */
+@media (max-width: 1023px) {
+  .chat-sidebar {
+    position: fixed;
+    top: 56px;
+    left: -278px;
+    bottom: 0;
+    height: 100%;
+    width: var(--sidebar-width);
+    background: var(--white);
+    box-shadow: 2px 0 4px 0 rgb(0 0 0 / 25%);
+    transition: 0.3s ease-in-out;
+    z-index: 2;
+  }
+
+  .chat-sidebar.show {
+    left: 0;
+  }
+}

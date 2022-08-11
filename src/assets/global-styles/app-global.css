@@ -16,6 +16,8 @@
   --gray-800: #343a40;
   --gray-900: #212529;
   --shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.75);
+  --header-height: 56px;
+  --sidebar-width: 275px;
 }
 
 * {

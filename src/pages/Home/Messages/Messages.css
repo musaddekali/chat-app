@@ -1,0 +1,53 @@
+.messages {
+  padding: 0 1rem 1rem 1rem;
+  overflow-x: hidden;
+}
+
+.message {
+  border-radius: 1rem;
+  padding: 0.5rem;
+  max-width: 60%;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.message.me {
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+.message-text {
+  font-size: 14px;
+  margin-bottom: 0.25rem;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  line-height: 1.3;
+  background: var(--gray-300);
+  color: var(--black);
+}
+
+.message.me .message-text {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.message-img {
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.message-auth-name {
+  font-size: 12px;
+  margin-bottom: 0.125rem;
+  display: inline-block;
+  color: var(--gray-600);
+}
+
+.message-time {
+  font-size: 11px;
+  color: var(--gray-600);
+}

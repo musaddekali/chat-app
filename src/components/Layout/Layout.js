@@ -1,12 +1,10 @@
 import { Outlet } from 'react-router-dom';
-import Navbar from '../Navbar/Navbar';
+import Header from '../Header/Header';
 
 const Layout = () => {
     return (
         <>
-            <header className='header fixed-top'>
-                <Navbar />
-            </header>
+            <Header />
             <main className="main">
                 <Outlet />
             </main>

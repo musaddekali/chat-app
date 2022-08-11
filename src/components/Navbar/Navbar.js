@@ -8,7 +8,7 @@ const Navbar = () => {
   const { user, handleSidebar } = useGlobalContext();
 
   return (
-    <nav className='navmenu'>
+    <nav className='navmenu d-flex'>
       <div className="container-fluid">
         <Link to='/' className="navmenu-logo">
           <span>Chat</span>
@@ -19,7 +19,7 @@ const Navbar = () => {
               {
                 user?.email ? (
                   <Link to='/profile' className="navmenu-user-link">
-                    <img src={user.img} alt={user.name} />
+                    <img src={user.image} alt={user.name} />
                     <span>{user.name}</span>
                   </Link>
                 ) :
