@@ -26,7 +26,7 @@ const Navbar = () => {
     <nav className="navmenu d-flex">
       <div className="container-fluid">
         <Link to="/" className="navmenu-logo">
-          <span>Chat</span>
+          <span>Chatta</span>
         </Link>
         <div className="navmenu-nav">
           <div className="navmenu-user-state">
