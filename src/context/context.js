@@ -69,6 +69,7 @@ export const initialState = {
     ],
     user: null,
     isSidebarOpen: false,
+    isModalOpen: false,
 }
 
 
@@ -78,6 +79,14 @@ export const AppProvider = ({ children }) => {
 
     const handleSidebar = () => {
         dispatch({ type: 'SIDEBAR_TOGGLE' });
+    }
+
+    const openModal = () => {
+        dispatch({type: 'OPEN_MODAL'});
+    }
+
+    const closeModal = () => {
+        dispatch({type: 'CLOSE_MODAL'});
     }
 
     // Get User and Auth info
@@ -113,7 +122,9 @@ export const AppProvider = ({ children }) => {
     return (
         <AppContext.Provider value={{
             ...state,
-            handleSidebar
+            handleSidebar,
+            openModal,
+            closeModal,
         }}>
             {children}
         </AppContext.Provider>

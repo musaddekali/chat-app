@@ -7,7 +7,7 @@
 }
 
 .profile .card {
-  width: max-content;
+  width: 100%;
 }
 
 .profile .card-img-wrap {
@@ -17,30 +17,6 @@
   overflow: hidden;
   position: relative;
   box-shadow: 0 2px 4px 0 rgb(0 0 0/25%);
-}
-
-.profile .card-img-wrap .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 2rem;
-  display: grid;
-  place-items: center;
-  color: var(--white);
-  background: rgba(var(--primary-rgb), 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.profile .card-img-wrap:hover .overlay {
-  opacity: 1;
-  visibility: visible;
 }
 
 .profile .card-img-wrap img {
@@ -53,6 +29,8 @@
 .profile .card-body {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .profile .card-title {

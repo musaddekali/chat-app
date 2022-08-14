@@ -18,6 +18,18 @@ function reducer(state, action) {
                 user: null
             }
 
+        case 'OPEN_MODAL':
+            return {
+                ...state,
+                isModalOpen: true,
+            }
+
+        case 'CLOSE_MODAL':
+            return {
+                ...state,
+                isModalOpen: false,
+            }
+
         default:
             return state;
     }

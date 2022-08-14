@@ -1,0 +1,17 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background: #808080d1;
+    place-items: center;
+}
+
+.modal-container {
+    width: calc(100vw - 3rem);
+    background: var(--white);
+    padding: .5rem;
+    border-radius: .5rem;
+}
