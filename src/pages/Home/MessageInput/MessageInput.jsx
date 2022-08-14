@@ -1,11 +1,25 @@
+import { useState } from "react";
 import { BsImage, BsEmojiSmile } from "react-icons/bs";
 import { FiSend } from "react-icons/fi";
-import './MessageInput.css';
+import "./MessageInput.css";
 
 const MessageInput = () => {
+  const [msg, setMsg] = useState("");
+
+  const handleInputHeight = (e) => {
+    e.target.style.height = 40 + "px";
+    e.target.style.height = Math.min(e.target.scrollHeight, 100) + "px";
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    alert(msg);
+    setMsg('');
+  };
+
   return (
     <div className="message-input-box">
-      <form className="mib-form">
+      <form onSubmit={handleFormSubmit} className="mib-form">
         <label className="mib-upload-btn mib-item" htmlFor="image">
           <BsImage />
         </label>
@@ -13,12 +27,12 @@ const MessageInput = () => {
         <div className="mib-text-input-wrap">
           <textarea
             onChange={(e) => {
-              e.target.style.height = 40 + "px";
-              e.target.style.height =
-                Math.min(e.target.scrollHeight, 100) + "px";
+              handleInputHeight(e);
+              setMsg(e.target.value);
             }}
             className="mib-text-input"
             type="text"
+            value={msg}
             placeholder="Aa..."
           />
           <button type="button" className="mib-item mib-emoji">

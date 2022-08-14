@@ -9,7 +9,7 @@ const SingleMessage = ({ message }) => {
       <p className="message-text">{text}</p>
       {image && <img src={image} alt="" className="message-img"/>}
       <span className="message-auth-name">
-        {name === user.name ? "Me" : name}
+        {uid === user.uid ? "Me" : name}
       </span>
       <time className="message-time">{createdAt.toLocaleDateString()}</time>
     </div>

@@ -45,16 +45,18 @@
   align-items: center;
 }
 
-.navmenu-guest-link {
+.navmenu-btn {
   font-size: 15px;
   background: var(--white);
   color: var(--black);
   padding: 0.25rem 0.5rem;
   border-radius: 50px;
   transition: 0.2s ease-in;
+  border: 1px solid var(--gray-400);
+  margin-left: 1rem;
 }
 
-.navmenu-guest-link:hover {
+.navmenu-btn:hover {
   background: var(--gray-200);
   transform: scale(1.02);
 }
